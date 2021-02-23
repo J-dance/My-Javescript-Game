@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+.heading {
+  font-family: "Orbitron", sans-serif;
+  color: #2DE2E6;
+  margin: 12px;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#mainHeading {
+  font-size: 64px;
+  font-style: italic;
+}
+
+#mainHeading2 {
+  font-size: 28px;
+  margin-left: 50px;
+}
+
+#heading2-slanted {
+  font-style: italic;
+}
+
+.gameInfo {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: #ff6c11;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.instructions {
+  color: white;
+  font-size: 22px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  margin: 0px;
+  text-shadow: -1px -1px 0 #ff3864, 1px -1px 0 #ff3864, -1px 1px 0 #2DE2E6, 1px 1px 0 #2DE2E6;
+}
+
+p {
+  color: #261447;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.gameOver {
+  color: #ff3864;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+#resetButton {
+  color: #261447;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(./space.jpg);
+  background-size: cover;
+}
+
+.title-section {
+  width: 100vw;
+  height: 25vh;
+}
+
+.game-window {
+  display: grid;
+  grid-template-columns: 1fr 1fr 400px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 400px 1fr 1fr;
+  border: 15px double #2DE2E6;
+  background: rgba(204, 204, 204, 0.25);
+  box-shadow: 0 0 30px #ccc;
+  width: 60vw;
+  height: 70vh;
+}
+
+#instructionsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0d0221;
+  padding: 20px;
+  border-top: 5px solid #2DE2E6;
+  border-bottom: 5px solid #2DE2E6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.main-grid {
+  height: 400px;
+  width: 400px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+}
+
+.grid-5x5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-6x6 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-8x8 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  box-shadow: 0 0 20px #ccc;
+}
+
+.bad {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #5c5b5b;
+  border: 1px solid black;
+  box-shadow: 0 0 1px #ccc;
+  z-index: 10;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.player {
+  position: absolute;
+  background: #c74949;
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  z-index: 20;
+}
+
+.tiredEyes {
+  background-image: url(./pixel-tired-eyes.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.bigEyes {
+  background-image: url(./pixel-eyes.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.sleepEyes {
+  background-image: url(./pixel-sleep-eyes.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.swirl {
+  background-image: url(./swirl.png);
+  background-size: cover;
+}
+
+.finish {
+  background-image: url(./pixel-bed.png);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.gameInfo {
+  display: flex;
+  align-items: center;
+}
+
+#livesCounter {
+  justify-content: flex-end;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#levelDisplay {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#movesCounter {
+  justify-content: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.footer {
+  height: 5vh;
+  width: 100vw;
+}
+
+#startContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(15deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(-180deg) scale(0.5);
+  }
+  80%, 100% {
+    transform: rotate(-360deg) scale(0.2);
+  }
+}
+@keyframes sleeping {
+  0% {
+    transform: rotate(0deg) scale(1);
+    left: 2px;
+    top: 0px;
+  }
+  25% {
+    transform: rotate(18deg) scale(0.8);
+    left: 5px;
+    top: -4px;
+  }
+  50% {
+    transform: rotate(30deg) scale(0.6);
+    left: 10px;
+    top: -8px;
+  }
+  80%, 100% {
+    transform: rotate(40deg) scale(0.4);
+    left: 15px;
+    top: -12px;
+  }
+}
+@keyframes sliding {
+  0% {
+    margin-left: 0px;
+  }
+  25% {
+    margin-left: 25%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  80% {
+    margin-left: 75%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+.spin {
+  position: relative;
+  animation-name: spinning;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.sleep {
+  animation-name: sleeping;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  left: 0px;
+  top: 0px;
+}
+
+.gameOver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(38, 20, 71, 0.8);
+  border: 5px solid #ff3864;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #ccc;
+  height: 25%;
+  width: 100%;
+}
+
+.marginSlide {
+  position: relative;
+  animation-name: sliding;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.heading {
+  font-family: "Orbitron", sans-serif;
+  color: #2DE2E6;
+  margin: 12px;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#mainHeading {
+  font-size: 64px;
+  font-style: italic;
+}
+
+#mainHeading2 {
+  font-size: 28px;
+  margin-left: 50px;
+}
+
+#heading2-slanted {
+  font-style: italic;
+}
+
+.gameInfo {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: #ff6c11;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.instructions {
+  color: white;
+  font-size: 22px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  margin: 0px;
+  text-shadow: -1px -1px 0 #ff3864, 1px -1px 0 #ff3864, -1px 1px 0 #2DE2E6, 1px 1px 0 #2DE2E6;
+}
+
+p {
+  color: #261447;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.gameOver {
+  color: #ff3864;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+#resetButton {
+  color: #261447;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff6c11;
+  border: 2px solid black;
+  height: 25%;
+  width: 60%;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+#resetButton {
+  background: rgba(255, 108, 17, 0.8);
+  margin-top: 30px;
+  display: flex;
+  height: 15%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #261447;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #ccc;
+  animation: pulse 2s infinite;
+}
+
+#close {
+  position: absolute;
+  right: 2%;
+  font-size: 24px;
+  color: white;
+}
+
+#close:hover {
+  cursor: pointer;
+}
+
+.startButton:hover {
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(45, 226, 230, 0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(45, 226, 230, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(45, 226, 230, 0);
+  }
+}

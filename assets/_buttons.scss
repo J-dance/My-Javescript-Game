@@ -1,0 +1,74 @@
+@import "_variables.scss";
+@import "_typography.scss";
+
+// styles for start button
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $colour-orange;
+  border: 2px solid black;
+  height: 25%;
+  width: 60%;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: $radiusButton;
+  animation: pulse 2s infinite;
+}
+
+// styles for reset button
+#resetButton {
+  background: rgba($colour-orange, 0.8);
+  margin-top: 30px;
+  display: flex;
+  height: 15%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid $colour-purple ;
+  border-radius: $radiusButton;
+  box-shadow: 0 0 30px #ccc;
+
+  animation: pulse 2s infinite;
+}
+
+// close intruction window 
+#close {
+  position: absolute;
+  right: 2%;
+  font-size: 24px;
+  color: white;
+}
+
+// for hover over buttons -> show pointer
+//  -----------------
+#close:hover {
+  cursor: pointer;
+}
+
+.startButton:hover {
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  cursor: pointer;
+}
+//  -----------------
+
+// key frames for button animation
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba($colour-green, 0.9);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba($colour-green, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba($colour-green, 0);
+	}
+}

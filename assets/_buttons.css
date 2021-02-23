@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+.heading {
+  font-family: "Orbitron", sans-serif;
+  color: #2DE2E6;
+  margin: 12px;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#mainHeading {
+  font-size: 64px;
+  font-style: italic;
+}
+
+#mainHeading2 {
+  font-size: 28px;
+  margin-left: 50px;
+}
+
+#heading2-slanted {
+  font-style: italic;
+}
+
+.gameInfo {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: #ff6c11;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.instructions {
+  color: white;
+  font-size: 22px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  margin: 0px;
+  text-shadow: -1px -1px 0 #ff3864, 1px -1px 0 #ff3864, -1px 1px 0 #2DE2E6, 1px 1px 0 #2DE2E6;
+}
+
+p {
+  color: #261447;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.gameOver {
+  color: #ff3864;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+#resetButton {
+  color: #261447;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff6c11;
+  border: 2px solid black;
+  height: 25%;
+  width: 60%;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+#resetButton {
+  background: rgba(255, 108, 17, 0.8);
+  margin-top: 30px;
+  display: flex;
+  height: 15%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #261447;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #ccc;
+  animation: pulse 2s infinite;
+}
+
+#close {
+  position: absolute;
+  right: 2%;
+  font-size: 24px;
+  color: white;
+}
+
+#close:hover {
+  cursor: pointer;
+}
+
+.startButton:hover {
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(45, 226, 230, 0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(45, 226, 230, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(45, 226, 230, 0);
+  }
+}

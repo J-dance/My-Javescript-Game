@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+.heading {
+  font-family: "Orbitron", sans-serif;
+  color: #2DE2E6;
+  margin: 12px;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#mainHeading {
+  font-size: 64px;
+  font-style: italic;
+}
+
+#mainHeading2 {
+  font-size: 28px;
+  margin-left: 50px;
+}
+
+#heading2-slanted {
+  font-style: italic;
+}
+
+.gameInfo {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: #ff6c11;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.instructions {
+  color: white;
+  font-size: 22px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  margin: 0px;
+  text-shadow: -1px -1px 0 #ff3864, 1px -1px 0 #ff3864, -1px 1px 0 #2DE2E6, 1px 1px 0 #2DE2E6;
+}
+
+p {
+  color: #261447;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+.gameOver {
+  color: #ff3864;
+  font-size: 38px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}
+
+#resetButton {
+  color: #261447;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+}

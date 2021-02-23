@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ready 'for Beddy</title>
+  <script src="script.js" async defer></script>
+  <link rel="stylesheet" href="./assets/_styles.css">
+  <script src="https://kit.fontawesome.com/d481d38beb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- title section at top of page -->
+  <div id="title-section" class="title-section">
+    <h1 id="mainHeading" class="heading">Ready for Beddy</h1>
+    <h3 id="mainHeading2" class="heading">Get Freddy Ready for Beddy!!! ...<span id="heading2-slanted">but take it steady</span></h3>
+  </div>
+
+  <!-- game section -->
+  <section id="game-window" class="game-window">
+
+    <!-- include the level, lives and timer -->
+    <div id="livesCounter" class="gameInfo"></div>
+    <div id="movesCounter" class="gameInfo"></div>
+    <div id="levelDisplay" class="gameInfo"></div>
+
+    <div id="startContainer">
+     <div id="startButton" class="startButton" onclick="beginLevel()"><p>Start</p></div>
+    </div>
+
+    <div id="instructionsContainer" class="invisible">
+      <div id="close" onclick="clearInstructions()">
+        <i class="far fa-window-close"></i>
+      </div>
+    </div>
+
+    <!-- main grid area for game -->
+    <section id="main-grid" class="main-grid">
+      <!-- insert grid here -->
+    </section>
+
+  </section>
+
+  <div class="footer"></div>
+
+</body>
+</html>
